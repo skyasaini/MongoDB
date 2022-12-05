@@ -14,3 +14,12 @@ collection_name='Addmision_details'
 
 collection=db[collection_name]
 
+records = dataframe.to_dict('records')
+
+col = collection.insert_many(records)
+
+col.inserted_ids
+
+result=collection.find()
+for i in result:
+    print(i)
